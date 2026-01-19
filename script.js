@@ -46,11 +46,14 @@ teamMembers.forEach(member => {
   const { name, role, email, img } = member;
 
   teamContainer.innerHTML += `
-    <div class="team-card">
-      <img src="${img}" alt="${name}">
+  <div class="team-card">
+    <img src="${img}" alt="${name}">
+    <div>
       <h3>${name}</h3>
       <p>${role}</p>
       <a href="mailto:${email}">${email}</a>
     </div>
-  `;
+  </div>
+`
+
 });
