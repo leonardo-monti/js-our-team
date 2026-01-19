@@ -37,11 +37,20 @@ const teamMembers = [
   }
 ];
 
-console.log(teamMembers)
+console.log(teamMembers);
+
+const teamContainer = document.getElementById("team-container");
 
 teamMembers.forEach(member => {
 
-  const { name, role, email } = member;
+  const { name, role, email, img } = member;
 
-  console.log(name, role, email);
+  teamContainer.innerHTML += `
+    <div class="team-card">
+      <img src="${img}" alt="${name}">
+      <h3>${name}</h3>
+      <p>${role}</p>
+      <a href="mailto:${email}">${email}</a>
+    </div>
+  `;
 });
